@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Undangan Ulang Tahun Bryan Levio Palit</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+    /* Animasi fade in untuk halaman awal */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', cursive;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      overflow-x: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    /* Tombol buka amplop (tombol biasa) */
+#openBtn {
+  display: inline-block;
+  margin: 250px auto;
+  padding: 30px 60px; /* lebih besar dari sebelumnya */
+  font-size: 2.5rem; /* lebih besar dari 1.8rem */
+  font-weight: 700;
+  color: white;
+  background-color: #e84393;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(232, 67, 147, 0.6);
+  transition: background-color 0.3s ease;
+  user-select: none;
+  display: block;
+  text-align: center;
+}
+
+    #openBtn:hover {
+      background-color: #d6305e;
+    }
+
+    /* Setelah tombol ditekan, body tetap dengan bg dan warna teks undangan */
+    body.bg-loaded {
+      color: #d63031;
+      display: block; /* ubah agar bisa scroll jika konten undangan panjang */
+      padding: 30px 15px;
+      min-height: 100vh;
+    }
+
+    /* Halaman undangan, awalnya disembunyikan */
+    #invitationPage {
+      display: none;
+      max-width: 700px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(214, 48, 48, 0.8);
+      font-family: 'Comic Neue', cursive;
+      text-align: center;
+      color: #d63031;
+      padding: 30px 25px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    /* Konten undangan */
+    h1, h2, h3 {
+      margin: 10px 0;
+      color: #d63031;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-top: 8px;
+      color: #6c5c5c;
+    }
+
+    .bryan-photo {
+      width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+      margin: 15px 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .gallery img {
+      width: 100px;
+      height: 100px;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(255, 105, 180, 0.7);
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .time-box {
+      background: #fab1a0;
+      border-radius: 14px;
+      padding: 15px 18px;
+      min-width: 70px;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+      user-select: none;
+      color: #fff;
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+
+    .time-box small {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tombol buka amplop -->
+  <button id="openBtn">Buka Undangan Bryan 🎉</button>
+
+  <!-- Halaman undangan -->
+  <div id="invitationPage">
+    <h1>Selamat Datang di Pesta 🎂</h1>
+    <h2>Ulang Tahun ke-4</h2>
+    <h2><strong>Bryan Levio Palit</strong></h2>
+    <img src="foto4.jpg" alt="Foto Bryan" class="bryan-photo" />
+    <p>Yuk rayakan hari istimewa bersama Bryan!</p>
+
+    <h3>📅 Detail Acara</h3>
+    <p><strong>Hari:</strong> Kamis, 12 Juni 2025</p>
+    <p><strong>Waktu:</strong> 16.00 WITA</p>
+    <p><strong>Tempat:</strong><br />Kompleks Wesabbe Blok D No. 61<br />(Depan Pintu 2 Unhas) Makassar</p>
+
+    <h3>📸 Galeri Bryan</h3>
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Bryan 1" />
+      <img src="foto2.jpg" alt="Bryan 2" />
+      <img src="foto3.jpg" alt="Bryan 3" />
+      <img src="foto5.jpg" alt="Bryan 4" />
+    </div>
+
+    <h3>⏳ Hitung Mundur</h3>
+    <div class="countdown">
+      <div class="time-box">
+        <span id="days">00</span>
+        <small>Hari</small>
+      </div>
+      <div class="time-box">
+        <span id="hours">00</span>
+        <small>Jam</small>
+      </div>
+      <div class="time-box">
+        <span id="minutes">00</span>
+        <small>Menit</small>
+      </div>
+      <div class="time-box">
+        <span id="seconds">00</span>
+        <small>Detik</small>
+      </div>
+    </div>
+
+    <p>💖 Sampai jumpa di hari bahagia Bryan!</p>
+  </div>
+
+  <!-- Audio lagu -->
+  <audio id="backgroundMusic" src="lagu.mp3" preload="auto"></audio>
+
+  <script>
+    const openBtn = document.getElementById('openBtn');
+    const invitationPage = document.getElementById('invitationPage');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    openBtn.addEventListener('click', () => {
+      // Tambahkan kelas bg-loaded ke body agar style background & warna aktif
+      document.body.classList.add('bg-loaded');
+
+      // Sembunyikan tombol dan tampilkan undangan
+      openBtn.style.display = 'none';
+      invitationPage.style.display = 'block';
+
+      // Mulai mainkan musik
+      backgroundMusic.play().catch(err => {
+        // Jika autoplay diblokir oleh browser, bisa diabaikan atau beri alert jika mau
+        console.log('Audio autoplay gagal:', err);
+      });
+    });
+
+    // Fungsi countdown timer
+    function updateCountdown() {
+      const eventDate = new Date('June 12, 2025 16:00:00 GMT+0800').getTime();
+      const now = new Date().getTime();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>
